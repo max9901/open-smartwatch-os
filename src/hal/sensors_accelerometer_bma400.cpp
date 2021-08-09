@@ -282,6 +282,7 @@ void OswHal::setupAccelerometer() {
   pinMode(BMA_INT_2, INPUT);
   attachInterrupt(BMA_INT_1, isrTap, FALLING);
   attachInterrupt(BMA_INT_2, isrStep, FALLING);
+  updateAccelerometer();
 }
 
 bool OswHal::hasBMA400(void) { return _hasBMA400; }
